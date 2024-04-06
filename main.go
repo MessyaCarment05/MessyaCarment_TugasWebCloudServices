@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -18,7 +19,7 @@ func main() {
 
 	fmt.Println("Web Services and Cloud Services Using Golang and MySQL")
 
-	db, err := sql.Open("mysql", "adminweb:testadmin@tcp(pathaws:3306)/webcloudservices")
+	db, err := sql.Open("mysql", "adminweb:testadmin@tcp(webcloudservices.c3ayqo6cawed.us-east-1.rds.amazonaws.com:3306)/webcloudservices")
 
 	if err != nil {
 		panic(err.Error())
